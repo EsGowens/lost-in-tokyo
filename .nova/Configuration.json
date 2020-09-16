@@ -1,0 +1,6 @@
+{
+  "editor.default_syntax" : "javascript",
+  "workspace.preview_append_paths" : false,
+  "workspace.preview_type" : "custom",
+  "workspace.preview_url" : "http:\/\/127.0.0.1:5500"
+}
