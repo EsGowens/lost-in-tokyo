@@ -1,6 +1,6 @@
-const Highlight = (props) => (
-  <span className={`relative highlight highlight-${props.color}`}>
-    <span className="relative z-2">{props.children}</span>
+const Highlight = ({ color, children }) => (
+  <span className={`relative highlight highlight-${color}`}>
+    <span className="relative z-2">{children}</span>
   </span>
 );
 
@@ -21,10 +21,14 @@ const Intro = () => (
   </div>
 );
 
-const NavItem = (props) => (
-  <li className={`mh2-ns f6 f4-1 tc ${props.className}`}>
-    <a className="white no-underline" href={props.href}>
-      {props.children}
+const NavItem = ({ className, href, children, logo }) => (
+  <li className={`mh2-ns f6 f4-1 tc ${className}`}>
+    <a className="white no-underline" href={href}>
+      {logo ? (
+        <img src="../images/logo.svg" className="db center logo" />
+      ) : (
+        children
+      )}
     </a>
   </li>
 );
@@ -39,15 +43,26 @@ const Nav = () => (
   </nav>
 );
 
+const Attraction = ({title, description, image, className}) => (
+    <div className={className}>
+        <h1>{title}</h1>
+        <p>{description}</p>
+        <img src={`../images/${image}`} />
+    </div>
+)
+
 const App = () => (
   <div>
     <div className="min-vh-100 ph4 flex flex-column">
       {}
       <Nav />
       <Intro />
-      {}
     </div>
-    <div className="flex flex-wrap container">{}</div>
+    <div className="flex flex-wrap container">
+    {attractions.map(attraction =>
+        <Attraction {...attraction}/>
+    )}
+    </div>
   </div>
 );
 
