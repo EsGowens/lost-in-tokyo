@@ -68,5 +68,13 @@ const attractions = [
     link: 'http://www.ghibli-museum.jp/en/',
     image: 'image_9.jpg',
     className: 'w-third-l ml-auto-l'
+  },
+  {
+    title: 'Down at the Shop',
+    description:
+    'Found here, down at the shop, are a slew of records ripe for the picking. Whether you want to dig through the crates for rarities, or just find the latest re-issues, we have you covered. ',
+    link: 'http://www.stonesthrow.com',
+    image: 'image_10.jpg',
+    className: 'w-third-l ml5-l'
   }
 ];
